@@ -38,7 +38,8 @@ import {
   Intro,
   Jacob,
   YouCanBlameMe,
-  Transpiling
+  Transpiling,
+  LetsGetStarted
 } from './slides'
 
 const images = {
@@ -65,7 +66,7 @@ export default class Presentation extends React.Component {
           <Slide transition={["zoom"]} bgColor="primary">
             <Intro />
           </Slide>
-          <Slide transition={["slide"]} bgColor="black" notes="You can even put notes on your slide. How awesome is that?">
+          <Slide transition={["slide"]} bgColor="secondary" notes="You can even put notes on your slide. How awesome is that?">
             <Jacob />
           </Slide>
           <Slide>
@@ -73,6 +74,9 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide transition={["slide"]} bgImage={images.city.replace("/", "")} bgDarken={0.75}>
             <Transpiling />
+          </Slide>
+          <Slide bgColor='secondary'>
+            <LetsGetStarted />
           </Slide>
           <Slide transition={["zoom", "fade"]} bgColor="primary">
             <Heading caps fit>Flexible Layouts</Heading>
