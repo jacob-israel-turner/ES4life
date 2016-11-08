@@ -2,8 +2,3 @@
 var divide = function divide(_ref) {var dividend = _ref.dividend,divisor = _ref.divisor;return dividend / divisor;};
 
 console.log(divide({ dividend: 12, divisor: 3 }));
-
-// (This is the source)
-const divide = ({dividend, divisor}) => dividend / divisor
-
-console.log(divide({dividend: 12, divisor: 3}))

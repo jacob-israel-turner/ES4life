@@ -37,7 +37,8 @@ require("spectacle/lib/themes/default/index.css");
 import {
   Intro,
   Jacob,
-  YouCanBlameMe
+  YouCanBlameMe,
+  Transpiling
 } from './slides'
 
 const images = {
@@ -71,21 +72,7 @@ export default class Presentation extends React.Component {
             <YouCanBlameMe />
           </Slide>
           <Slide transition={["slide"]} bgImage={images.city.replace("/", "")} bgDarken={0.75}>
-            <Appear fid="1">
-              <Heading size={1} caps fit textColor="primary">
-                Full Width
-              </Heading>
-            </Appear>
-            <Appear fid="2">
-              <Heading size={1} caps fit textColor="tertiary">
-                Adjustable Darkness
-              </Heading>
-            </Appear>
-            <Appear fid="3">
-              <Heading size={1} caps fit textColor="primary">
-                Background Imagery
-              </Heading>
-            </Appear>
+            <Transpiling />
           </Slide>
           <Slide transition={["zoom", "fade"]} bgColor="primary">
             <Heading caps fit>Flexible Layouts</Heading>

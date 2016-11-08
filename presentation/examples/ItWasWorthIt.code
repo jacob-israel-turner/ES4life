@@ -1,0 +1,8 @@
+const add = (...addends) => addends.reduce((sum, num) => sum + num, 0)
+
+const logResults = ({addends, result}) => console.log(`The sum of (${addends.join(' + ')}) is ${result}`)
+
+const addAndLog = (...addends) => logResults({addends, result: add(...addends)})
+
+addAndLog(1, 3) // "The sum of (1 + 3) is 4"
+addAndLog(5, 3, 7) // "The sum of (5 + 3 + 7) is 15"
