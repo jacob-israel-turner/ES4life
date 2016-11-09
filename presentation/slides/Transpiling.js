@@ -16,6 +16,7 @@ export default () => (
           it was all worth it
         </Heading>
         <CodePane
+          textSize={18}
           transition={["fade"]} 
           bgColor="secondary"
           lang="js"

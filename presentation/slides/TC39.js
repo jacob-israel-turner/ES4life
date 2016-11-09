@@ -12,7 +12,7 @@ export default () => (
     <List>
       <Appear fid='1'>
         <ListItem textColor='tertiary'>
-          <Text textColor='primary'>TC39 is respobsible for evolving ECMAScript (or, JavaScript)</Text>
+          <Text textColor='primary'>TC39 is responsible for evolving ECMAScript (or, JavaScript)</Text>
         </ListItem>
       </Appear>
       <Appear fid='2'>

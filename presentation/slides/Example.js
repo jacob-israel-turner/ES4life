@@ -12,7 +12,7 @@ const colorSchemes = {
   }
 }
 
-export default ({name, es6, es5, scheme}) => {
+export default ({name, es6, es5, scheme, codeSize = 18}) => {
   const colorScheme = colorSchemes[scheme] 
   return (
     <div>
@@ -25,6 +25,7 @@ export default ({name, es6, es5, scheme}) => {
             ES5
           </Heading>
           <CodePane
+            textSize={codeSize}
             margin={8}
             transition={["fade"]}
             bgColor={colorScheme.bgColor}
@@ -38,6 +39,7 @@ export default ({name, es6, es5, scheme}) => {
             ES6
           </Heading>
           <CodePane
+            textSize={codeSize}
             margin={8}
             transition={["fade"]}
             bgColor={colorScheme.bgColor}

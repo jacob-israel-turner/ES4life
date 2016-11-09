@@ -30,6 +30,7 @@ dontChangeMeBro = false // ¯\\_(ツ)_/¯`
 
   {
     name: 'Let/Block Scoping',
+    codeSize: 15,
     es6: 
 `var funcArray = []
 for (let i = 0; i < 10; i++) {
@@ -56,6 +57,7 @@ funcArray[8]() // 10`
 
   {
     name: 'JavaScript Modules',
+    codeSize: 14,
     es6: 
 `import $ from 'jquery'
 
@@ -86,6 +88,7 @@ define('jqueryHelpers',
 
   {
     name: 'Destructuring',
+    codeSize: 17,
     es6:
 `var meObject = {
   name: 'Jacob',
@@ -125,6 +128,7 @@ logHairColor(name, hair) // Jacob's hair is brown`
 
   {
     name: 'Array Spread',
+    codeSize: 14,
     es6:
 `var firstNumbers = [1, 2, 3]
 var lastNumbers = [4, 5, 6]
@@ -152,7 +156,7 @@ logArgs.apply(null, allNumbers) // 1 2`,
 
   {
     name: 'Async/Await',
-    subtitle: '(Not available in DomoWeb yet!)',
+    codeSize: 14, 
     es6:
 `try {
   const response = await GET(url)

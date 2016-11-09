@@ -69,9 +69,10 @@ const theme = createTheme({
 
 export default class Presentation extends React.Component {
   getExampleSlides() {
-    return examples.map(({name, es6, es5}, index) => (
+    return examples.map(({name, es6, es5, codeSize}, index) => (
         <Slide key={name} bgColor={index % 2 ? 'secondary' : 'primary'}>
           <Example 
+            codeSize={codeSize} 
             scheme={index % 2 ? 'a' : 'b'}
             name={name}
             es6={es6}

@@ -5,6 +5,7 @@ export default () => (
   <div>
     <Heading size={3}>You can blame me for this...</Heading>
     <CodePane
+      textSize={18}
       transition={["fade"]} 
       bgColor="secondary"
       lang="js"
