@@ -39,8 +39,15 @@ import {
   Jacob,
   YouCanBlameMe,
   Transpiling,
-  LetsGetStarted
+  LetsGetStarted,
+  ES6Features,
+  ES7Features,
+  ESNextFeatures,
+  Example,
+  TC39
 } from './slides'
+
+import examples from './examples.js'
 
 const images = {
   city: require("../assets/city.jpg"),
@@ -59,6 +66,18 @@ const theme = createTheme({
 });
 
 export default class Presentation extends React.Component {
+  getExampleSlides() {
+    return examples.map(({name, es6, es5}, index) => (
+        <Slide key={name} bgColor={index % 2 ? 'secondary' : 'primary'}>
+          <Example 
+            scheme={index % 2 ? 'a' : 'b'}
+            name={name}
+            es6={es6}
+            es5={es5}
+          />
+        </Slide>
+      ))
+  }
   render() {
     return (
       <Spectacle theme={theme}>
@@ -76,8 +95,21 @@ export default class Presentation extends React.Component {
             <Transpiling />
           </Slide>
           <Slide bgColor='secondary'>
+            <TC39 />
+          </Slide>
+          <Slide bgColor='secondary'>
+            <ES6Features />
+          </Slide>
+          <Slide bgColor='secondary'>
+            <ES7Features />
+          </Slide>
+          <Slide bgColor='secondary'>
+            <ESNextFeatures />
+          </Slide>
+          <Slide bgColor='secondary'>
             <LetsGetStarted />
           </Slide>
+          {this.getExampleSlides()}
           <Slide transition={["zoom", "fade"]} bgColor="primary">
             <Heading caps fit>Flexible Layouts</Heading>
             <Layout>
