@@ -44,16 +44,14 @@ funcArray[8]() // 8`,
     es5: 
 `var funcArray = []
 for (var i = 0; i < 10; i++) {
-  (function(toLog) {
-    funcArray.push(function() {
-      console.log(toLog)
-    })
-  })(i)
+  funcArray.push(function() {
+    console.log(i)
+  })
 }
 
-funcArray[1]() // 1
-funcArray[3]() // 3  
-funcArray[8]() // 8`
+funcArray[1]() // 10
+funcArray[3]() // 10
+funcArray[8]() // 10`
   },
 
   {
@@ -122,5 +120,61 @@ logHairColor(name, hair) // Jacob's hair is brown`
   if (!separator) separator = []
   return array.join(separator)
 }`,
+  },
+
+
+  {
+    name: 'Array Spread',
+    es6:
+`var firstNumbers = [1, 2, 3]
+var lastNumbers = [4, 5, 6]
+
+var allNumbers = [...firstNumbers, ...lastNumbers, 7, 8, 9]
+
+function logArgs (a, b) {
+  console.log(a, b)
+}
+
+logArgs(...allNumbers) // 1 2`,
+    es5:
+`var firstNumbers = [1, 2, 3]
+var lastNumbers = [4, 5, 6]
+
+var allNumbers = firstNumbers.concat(lastNumbers, [7, 8, 9])
+
+function logArgs (a, b) {
+  console.log(a, b)
+}
+
+logArgs.apply(null, allNumbers) // 1 2`,
+  },
+
+
+  {
+    name: 'Async/Await',
+    subtitle: '(Not available in DomoWeb yet!)',
+    es6:
+`try {
+  const response = await GET(url)
+  console.log(response)
+} catch(e) {
+  console.error(e)
+}
+
+async function GET(url) {
+  return $http(url) // Returns a promise
+}`,
+    es5:
+`GET(url)
+    .then(function(res) {
+      console.log(res)
+    })
+    .catch(function(e) {
+      console.error(e)
+    })
+
+function GET(url) {
+  return $http(url) // Returns a promise
+}`
   }
 ]
