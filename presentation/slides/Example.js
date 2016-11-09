@@ -16,7 +16,7 @@ export default ({name, es6, es5, scheme}) => {
   const colorScheme = colorSchemes[scheme] 
   return (
     <div>
-      <Heading size={1} textColor={colorScheme.textColor}>
+      <Heading size={1} cap fit textColor={colorScheme.textColor}>
         {name}
       </Heading>
       <Appear fid='1'>
