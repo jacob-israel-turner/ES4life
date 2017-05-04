@@ -1,5 +1,5 @@
 import React from "react"
-import {Heading, List, ListItem, Appear, Text} from "spectacle"
+import {Heading, List, ListItem, Appear, Text, Image} from "spectacle"
 
 export default () => (
   <div>
